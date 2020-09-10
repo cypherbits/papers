@@ -26,18 +26,22 @@ If the chat is listed on the main page:
 Other option for private rooms encryption:
 - Do not store the first part of the AES key on plaintext. Use a hash of the full AES key. That means the user have to type or copy/paste a longer key. This may be even safer but may be inconvenient for users.
 
+When we store the room password (second half of the room AES key) on the user SECURE COOKIE, the user does not have tha
+
 
 --------------------------------------------------------------
 
 [MESSAGES]
 
-Each message on an encrypted chat room will generate a new random IV or Nonce and will be stored alongside the encrypted message on database.
+Each message on an encrypted chat room will generate a new random IV or Nonce and will be stored alongside the encrypted message on database. Base64 is ok for storing messages and IV.
 
 ---------------------------------------------------------------
 
 [PRIVATE MESSAGES]
 
 Private messages are always encrypted even if the user is guest.
+
+
 
 
 ---------------------------------------------------------------
@@ -58,8 +62,11 @@ This means not only cookies with the standard security like:
 - Only HTTP enabled.
 - HTTPS ?
 - SameSite Strict.
+
 But means that the content is encrypted!
 The content of the Secure COOKIES sent to the client browser is encrypted with a global AES256 password (set on a chat config file and global for all users). The IV or nonce will be derived from the user PHP session id.
+
+This will be used for storing a private rooms password (second half of the key).
 
 --------------------------------------------------------------
 

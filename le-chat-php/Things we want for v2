@@ -21,8 +21,6 @@ At least the same features as the actual version + Encryption document + this do
 
     Multi chatrooms: public or private. And hidden property (hide from the index page chat list).
 
-    An admin can add a member to a private chat room without need to share link. (by using the member public key sending the chat AES key).
-
     Tabs for private messages or chat rooms??
 
         Option to whitelist HOST HTTP Header for our domains. (off by default)

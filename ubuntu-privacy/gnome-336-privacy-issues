@@ -15,5 +15,5 @@ Use cases:
 - There is no guide anywhere to disable this metadata collection easily.
 - This keeps metadata of many files you work with even if they are just temporal files.
 - There is no clear algorithm to clean this metadata: (see this comment and the issue https://gitlab.gnome.org/GNOME/gvfs/-/issues/117#note_900090)
-- Tor Browser is affected by this: metadata on sites you visit is written on this files.
-- Veracrypt is affected too.
+- Tor Browser is affected by this: metadata on sites you visit (like actual .onion domains) is written on this files.
+- Files inside Veracrypt containers are affected too.

@@ -4,7 +4,7 @@ Use cases:
 
 1. User cannot disable thumbnails generation:
 - A user can disable thumbnail generation for Files (Nautilus) only.
-- If you open an image with EyeOfGnome a thumbnail will be generated. No way to disable this. (https://gitlab.gnome.org/GNOME/eog/-/issues/130)
+- If you open an image with EyeOfGnome a thumbnail will be generated. No way to disable this in the app itself. (https://gitlab.gnome.org/GNOME/eog/-/issues/130)
 - Thumbnails will still be generated on the open, save or select dialogs. For example, saving an image with Firefox will always generate a thumbnail.
 - This cannot be disabled easily in the Control Center. But there is a Dconf command to disable all thumbnail generation (dconf write /org/gnome/desktop/thumbnailers/disable-all true)
 - TODO: investigate how old thumbnails are cleaned / deleted.

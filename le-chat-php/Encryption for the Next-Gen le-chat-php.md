@@ -6,7 +6,7 @@ All encryption will be done using AES256-GCM and Public/Private crypto using the
 
 -----------------------------------------------------------
 
-##[CHAT ROOMS]
+##CHAT ROOMS
 
 The new chat will allow multiple rooms with two types:
 
@@ -31,13 +31,13 @@ When we store the room password (second half of the room AES key) on the user SE
 
 --------------------------------------------------------------
 
-##[MESSAGES]
+##MESSAGES
 
 Each message on an encrypted chat room will generate a new random IV or Nonce and will be stored alongside the encrypted message on database. Base64 is ok for storing messages and IV.
 
 ---------------------------------------------------------------
 
-##[PRIVATE MESSAGES]
+##PRIVATE MESSAGES
 
 Private messages are always encrypted even if the user is guest.
 
@@ -46,7 +46,7 @@ Private messages are always encrypted even if the user is guest.
 
 ---------------------------------------------------------------
 
-##[USER ENCRYPTION]
+##USER ENCRYPTION
 
 Personal notes will be encrypted using personal AES key.
 
@@ -55,7 +55,7 @@ Mods and admin notes will be encrypted using a unique generated AES keys shared 
 
 --------------------------------------------------------------
 
-##[ENCRYPTED COOKIES]
+##ENCRYPTED COOKIES
 
 This means not only cookies with the standard security like:
 - Expire time ok.

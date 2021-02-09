@@ -73,9 +73,11 @@ This will be used for storing a private rooms password (second half of the key).
 
 ## More:
 
-    For this: DanWin#53
-    Guest sessions private messages will be hidden if the user click "logout" on every session.
-    If password is not required (is this possible???) we will generate one and show it to the guest user to use it for login on other devices. If the guest user log out on all devices, private messages are hidden because the key is not known.
+For this: DanWin#53.
+
+Guest sessions private messages will be hidden if the user click "logout" on every session.
+
+If password is not required (is this possible???) we will generate one and show it to the guest user to use it for login on other devices. If the guest user log out on all devices, private messages are hidden because the key is not known.
 
 
 

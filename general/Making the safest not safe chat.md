@@ -10,9 +10,9 @@
 
 - Provide a way to implement the safest not safe chat. 
 - This means the safest chat that we could develop using only server-side cryptography.
-- This idea comes from le-chat-php used on some Dark Webs. Javascript is most of the time disabled, so we cannot use it for real safe end-to-end encryption in the browser. We can think of the safest unsafe way of providing privacy with only server-side crypto.
+- This idea comes from _le-chat-php_ used on some Dark Webs. Javascript is most of the time disabled, so we cannot use it for real safe end-to-end encryption in the browser. We can think of the safest unsafe way of providing privacy with only server-side crypto.
 - We will focus on a general view so any application, not just a chat app can get ideas to get better privacy and security for its users.
-- In this case we will be using the standard, and most recommended modern cryptography library: libsodium.
+- In this case we will be using the standard, and most recommended modern cryptography library: _libsodium_.
 
 ## 3. Dictionary
 
@@ -72,13 +72,12 @@ Personal notes will be encrypted using personal AES key.
 
 Mods and admin notes will be encrypted using a unique generated AES keys shared with the public keys of the members of that type of users.
 
-## 5. Global workflow
-
-### 5.1. 
-
-## 6. Notes
-### 6.1 Benchmarking data serialization functions
+## 5. Notes
+### 5.1. Benchmarking data serialization functions
 In benchmarks with PHP 7.4 it shows that:
 - `base64_encode()` function is the fastest. (0.00008 seconds)
 - `sodium_bin2hex()` function is slower. (0.00019 seconds)
 - `sodium_bin2base64`(SODIUM_BASE64_VARIANT_ORIGINAL) function is the slowest. (0.00050 seconds)
+
+### 5.2. Benchmarking key generation
+- `random_bytes` seems faster in some cases than `sodium_crypto_aead_aes256gcm_keygen`. But should be the same.

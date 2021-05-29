@@ -68,6 +68,11 @@ Private messages are always encrypted even if the user is guest.
 
 ### 4.5. USER ENCRYPTION
 
+When a user joins: we will generate a USER_KEYPAIR (USER_PUBLICKEY and USER_PRIVATEKEY) and a random USER_AES_KEY.
+Members will encrypt their USER_PRIVATEKEY with their USER_AES_KEY before storing it to database.
+We can generate a random USER_AES_NONCE too and store it on plaintext.
+
+
 Personal notes will be encrypted using personal AES key.
 
 Mods and admin notes will be encrypted using a unique generated AES keys shared with the public keys of the members of that type of users.
